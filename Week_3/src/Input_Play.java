@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Input_Play {
 	public static Scanner input = new Scanner (System.in);
 	public static void main(String[] args) {
@@ -54,14 +55,13 @@ public class Input_Play {
 		public static double convertToC(double fTemp)
 		{
 		return (fTemp - 32) *5/9;
-		
+	 
 		}
 
 		public static double convertToK(double cTemp)
 		{
 			return (cTemp +273.15);
 		}
-		
-	
 
+	
 }
