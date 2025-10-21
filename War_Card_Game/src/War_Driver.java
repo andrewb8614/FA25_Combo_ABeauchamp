@@ -2,20 +2,22 @@
 public class War_Driver {
 
 	public static void main(String[] args) {
-		Card[] cards = new Card[52];
+		Deck deck = new Deck();
+		deck.shuffle();
+		deck.printCards();
+		//deck.bubbleSort();
+		
+		//deck.insertionSort();
+		System.out.println("\n");
+		deck.selectionSort();
+		System.out.println("\n");
+		deck.printCards();
 
-		fillCards(cards);
-
-		printCards(cards);
-		Card target = new Card(12, 2);
-		int cardNum = search(cards, target);
-
-		int cardNum2 = binSearch(cards, target);
-		System.out.println(target);
-		System.out.println(cardNum);
 	}
 
-	private static int binSearch(Card[] cards, Card target) { // think of this like the guessing game guess a num 1-10, you guess 5, num is higher, now you discard all the nums 5 and below, low becomes mid
+	private static int binSearch(Card[] cards, Card target) { // think of this like the guessing game guess a num 1-10,
+																// you guess 5, num is higher, now you discard all the
+																// nums 5 and below, low becomes mid
 		int low = 0;
 		int high = cards.length - 1;
 
@@ -43,25 +45,6 @@ public class War_Driver {
 		return -1;
 	}
 
-	private static void printCards(Card[] cards) {
-		for (Card card : cards) {
-			System.out.print(card + ", ");
-			if (card.getRank() == 13)
-				System.out.println();
-		}
-
-	}
-
-	private static void fillCards(Card[] cards) {
-		int index = 0;
-
-		for (int suit = 0; suit <= 3; suit++) {
-			for (int rank = 1; rank <= 13; rank++) {
-				cards[index] = new Card(rank, suit);
-				index++;
-			}
-		}
-
-	}
-
 }
+
+
