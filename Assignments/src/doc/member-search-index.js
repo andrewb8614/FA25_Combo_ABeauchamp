@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Javadoc","l":"Javadoc()","u":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"Javadoc","l":"successfullyAttacked(int)"}];updateSearchResults();

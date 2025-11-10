@@ -12,7 +12,7 @@ public class hourUnit {
 			
 			int hour = time.getHour();
 			
-			assertEquals(6, hour);
+			assertEquals(6, hour); 
 			
 		
 
